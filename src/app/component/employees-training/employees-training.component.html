@@ -1,0 +1,23 @@
+<div *ngIf="trainingData.length > 0">
+  <h5>Training Data for Employee {{ employeeId }}</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Course</th>
+        <th>Code</th>
+        <th>Score</th>
+        <th>Hours</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let training of trainingData">
+        <td>{{ training.courseName }}</td>
+        <td>{{ training.code }}</td>
+        <td>{{ training.score }}</td>
+        <td>{{ training.hoursSpent }}</td>
+        <td>{{ training.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
