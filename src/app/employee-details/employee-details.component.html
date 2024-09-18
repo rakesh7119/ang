@@ -1,0 +1,34 @@
+<h2>Employee Details</h2>
+<div *ngIf="employee">
+  <p><strong>ID:</strong> {{ employee.id }}</p>
+  <p><strong>Name:</strong> {{ employee.name }}</p>
+  <p><strong>Department:</strong> {{ employee.department }}</p>
+  <p><strong>Salary:</strong> {{ employee.salary }}</p>
+
+  <h3>Training Details</h3>
+  <table *ngIf="employee.trainings && employee.trainings.length > 0">
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Course Code</th>
+        <th>Score</th>
+        <th>Hours Spent</th>
+        <th>Date Completed</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let training of employee.trainings">
+        <td>{{ training.courseName }}</td>
+        <td>{{ training.courseCode }}</td>
+        <td>{{ training.score }}</td>
+        <td>{{ training.hoursSpent }}</td>
+        <td>{{ training.dateCompleted }}</td>
+        <td>{{ training.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="!employee.trainings || employee.trainings.length === 0">
+    No training records available.
+  </p>
+</div>

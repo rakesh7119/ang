@@ -1,0 +1,25 @@
+<div class="container">
+  <h2>Training Details</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Course Name</th>
+        <th>Course Code</th>
+        <th>Score</th>
+        <th>Hours Spent</th>
+        <th>Date Completed</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let training of trainings">
+        <td>{{training.courseName}}</td>
+        <td>{{training.courseCode}}</td>
+        <td>{{training.score}}</td>
+        <td>{{training.hoursSpent}}</td>
+        <td>{{training.dateCompleted}}</td>
+        <td>{{training.status}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
